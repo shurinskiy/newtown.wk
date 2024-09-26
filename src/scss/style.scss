@@ -26,6 +26,11 @@ $breakpoints: (
 	'xxxxlg': 1920px
 );
 
+@include font-face("RoundsBlack", "RB", 900);
+@include font-face("GothamPro_black", "GP", 900);
+@include font-face("GothamPro_bold", "GP", 700);
+@include font-face("GothamPro_medium", "GP", 500);
+@include font-face("GothamPro", "GP", 400);
 
 // @include font-face("Montserrat-ExtraLight", "MR", 200);
 // @include font-face("Montserrat-ExtraBold", "MR", 800);
@@ -37,7 +42,7 @@ $breakpoints: (
 // @include font-face("Montserrat-Bold", "MR", 700);
 // @include font-face("Montserrat-Thin", "MR", 100);
 
-// @import "../../node_modules/swiper/swiper";
+@import "../../node_modules/swiper/swiper";
 
 // Import BEM blocks scss
 @import "../blocks/**/*.scss";
