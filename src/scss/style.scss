@@ -51,6 +51,8 @@ $breakpoints: (
 	--size: #{$basesize}px;
 	--container: 1240px;
 	--gap: 24px;
+	--accent: 53, 84, 25;
+	--accident: 190, 197, 49;
 	
 	@include media('<=xs') {
 		--gap: 16px;
