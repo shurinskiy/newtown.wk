@@ -1,0 +1,8 @@
+.title {
+	$self: &;
+	font-size: 45px;
+	color: rgb(var(--accent));
+	text-transform: uppercase;
+	font-family: "RB", sans-serif;
+	@include range(45px, 28px, 1280px, 480px);
+}

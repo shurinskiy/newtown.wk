@@ -1,26 +1,27 @@
 <header class="header @@if(this.mod){header_@@mod}" data-scroll-lock-fill-gap>
 	<div class="header__inner container">
-		<div class="header__navi navi">
-			<button class="navi__close"><img src="./images/close.svg" alt=""></button>
-			<div class="navi__menu" data-scroll-lock-scrollable>
-				<div class="navi__side">
-					<a class="navi__link" href="./">О компании</a>
-					<a class="navi__link" href="./">О Старице</a>
-					<a class="navi__link" href="./">Объекты</a>
-					<a class="navi__link" href="./">Маркетинг территории</a>
+		<a class="header__logo-mobile" href="/"><img src="./images/logo.svg" alt=""></a>
+		<div class="header__navi">
+			<button class="header__close"><svg><use xlink:href="#icon-close"></use></svg></button>
+			<div class="header__menu" data-scroll-lock-scrollable>
+				<div class="header__menu-side">
+					<a class="header__menu-link" href="./">О компании</a>
+					<a class="header__menu-link" href="./">О Старице</a>
+					<a class="header__menu-link" href="./">Объекты</a>
+					<a class="header__menu-link" href="./">Маркетинг территории</a>
 				</div>
-				<a class="navi__logo" href="/">
+				<a class="header__logo" href="/">
 					<img src="./images/logo.svg" alt="">
 					<span>Новый</span>
 					<span>Город</span>
 				</a>
-				<div class="navi__side">
-					<a class="navi__link" href="./">Команда</a>
-					<a class="navi__link" href="./">Новости</a>
-					<a class="navi__link" href="./">Контакты</a>
+				<div class="header__menu-side">
+					<a class="header__menu-link" href="./">Команда</a>
+					<a class="header__menu-link" href="./">Новости</a>
+					<a class="header__menu-link" href="./">Контакты</a>
 				</div>
 			</div>
 		</div>
-		<button class="header__toggle"><img src="./images/menu.svg" alt=""></button>
+		<button class="header__toggle"><svg><use xlink:href="#icon-menu"></use></svg></button>
 	</div>
 </header>

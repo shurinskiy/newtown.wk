@@ -1,0 +1,111 @@
+.town {
+	$self: &;
+	padding-top: 50px;
+
+	&::after {
+		display: block;
+		content: '';
+		height: 20px;
+		background: url('#{$images-path}arch-2.svg') center / 100px 18px repeat-x transparent;
+		max-width: var(--container);
+		width: calc(100% - var(--gap) * 2);
+		margin: 0 auto;
+	}
+
+	&__inner {
+
+	}
+
+	&__title {
+		margin-bottom: 30px;
+	}
+
+	&__cards {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 35px 90px;
+		margin-bottom: 40px;
+	}
+
+	&__card {
+		box-sizing: border-box;
+		border-radius: 10px;
+		border: 4px solid rgb(var(--accident));
+		padding: 20px 55px;
+		min-height: 350px;
+		color: inherit;
+		text-decoration: none;
+		background-color: #fff;
+		transition: background-color 0.3s;
+		
+		&:hover {
+			background-color: rgb(var(--accident));
+		}
+	}
+
+	&__card-image {
+		width: 119px;
+		height: 119px;
+		border-radius: 200px;
+		overflow: hidden;
+		margin-bottom: 20px;
+	}
+
+	&__card-text {
+
+	}
+
+	&__bottom {
+		box-sizing: border-box;
+		background-color: rgb(var(--accent));
+		margin: 0 auto 40px 0;
+		width: calc(100% - var(--gap));
+		max-width: calc(100% - (100% - 1280px) / 2);
+	}
+	
+	&__bottom-inner {
+		margin-left: auto;
+		max-width: 1280px;
+		display: flex;
+	}
+	
+	&__bottom-text {
+		box-sizing: border-box;
+		padding: 35px 0 35px 100px;
+		color: #fff;
+		font-size: 20px;
+		width: 100%;
+		max-width: 700px;
+		margin-right: auto;
+		
+		span {
+			font-size: 36px;
+			font-family: "RB", sans-serif;
+		}
+	}
+
+	&__bottom-image {
+		width: 400px;
+		flex-shrink: 0;
+		position: relative;
+		background-color: #fff;
+
+		&::before {
+			display: block;
+			content: '';
+			height: 100%;
+			width: 20px;
+			border-radius: 0 10px 10px 0;
+			background-color: rgb(var(--accent));
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		
+		img {
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+		}
+	}
+}

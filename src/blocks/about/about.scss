@@ -1,0 +1,83 @@
+.about {
+	$self: &;
+	padding-top: 60px;
+
+	&::after {
+		display: block;
+		content: '';
+		height: 20px;
+		background: url('#{$images-path}arch-3.svg') center / 100px 18px repeat-x transparent;
+		max-width: var(--container);
+		width: calc(100% - var(--gap) * 2);
+		margin: 0 auto;
+	}
+
+	&__top {
+
+	}
+
+	&__title {
+		margin-bottom: 40px;
+	}
+
+	&__text {
+		font-size: 30px;
+		text-align: center;
+		max-width: 890px;
+		margin: 0 auto 95px;
+	}
+
+	&__cards {
+		max-width: 1560px;
+		margin: 0 auto 40px;
+		width: calc(100% - var(--gap) * 2);
+		display: grid;
+		grid-gap: 40px 240px;
+		grid-template-columns: repeat(2, 1fr);
+	}
+	
+	&__card {
+		box-sizing: border-box;
+		position: relative;
+		grid-column: span 1;
+		background-color: rgba(var(--accent), 0.2);
+		border-radius: 10px;
+		min-height: 290px;
+		padding: 10px;
+		color: rgb(var(--accent));
+		text-transform: uppercase;
+		display: flex;
+		align-items: center;
+
+		&:nth-child(even) {
+			text-align: right;
+			
+			#{$self}__card-icon {
+				left: 0;
+				transform: translateX(-35%);
+			}
+		}
+		
+		&:nth-child(odd) {
+			text-align: left;
+			
+			#{$self}__card-icon {
+				transform: translateX(35%);
+				right: 0;
+			}
+		}
+	}
+	
+	&__card-text {
+		width: 100%;
+		max-width: 310px;
+		margin: 0 auto;
+		font-size: 18px;
+		font-weight: 500;
+		line-height: 1.4;
+	}
+
+	&__card-icon {
+		position: absolute;
+	}
+}

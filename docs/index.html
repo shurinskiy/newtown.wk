@@ -10,41 +10,44 @@
 <body id="home"> 
 <header class="header " data-scroll-lock-fill-gap>
 	<div class="header__inner container">
-		<div class="header__navi navi">
-			<button class="navi__close"><img src="./images/close.svg" alt=""></button>
-			<div class="navi__menu" data-scroll-lock-scrollable>
-				<div class="navi__side">
-					<a class="navi__link" href="./">О компании</a>
-					<a class="navi__link" href="./">О Старице</a>
-					<a class="navi__link" href="./">Объекты</a>
-					<a class="navi__link" href="./">Маркетинг территории</a>
+		<a class="header__logo-mobile" href="/"><img src="./images/logo.svg" alt=""></a>
+		<div class="header__navi">
+			<button class="header__close"><svg><use xlink:href="#icon-close"></use></svg></button>
+			<div class="header__menu" data-scroll-lock-scrollable>
+				<div class="header__menu-side">
+					<a class="header__menu-link" href="./">О компании</a>
+					<a class="header__menu-link" href="./">О Старице</a>
+					<a class="header__menu-link" href="./">Объекты</a>
+					<a class="header__menu-link" href="./">Маркетинг территории</a>
 				</div>
-				<a class="navi__logo" href="/">
+				<a class="header__logo" href="/">
 					<img src="./images/logo.svg" alt="">
 					<span>Новый</span>
 					<span>Город</span>
 				</a>
-				<div class="navi__side">
-					<a class="navi__link" href="./">Команда</a>
-					<a class="navi__link" href="./">Новости</a>
-					<a class="navi__link" href="./">Контакты</a>
+				<div class="header__menu-side">
+					<a class="header__menu-link" href="./">Команда</a>
+					<a class="header__menu-link" href="./">Новости</a>
+					<a class="header__menu-link" href="./">Контакты</a>
 				</div>
 			</div>
 		</div>
-		<button class="header__toggle"><img src="./images/menu.svg" alt=""></button>
+		<button class="header__toggle"><svg><use xlink:href="#icon-menu"></use></svg></button>
 	</div>
 </header> 
 
 <section class="hero">
 	<div class="hero__slider swiper">
-		<div class="hero__slide swiper-slide"><img src="./images/hero-slide-0.webp" alt=""></div>
-		<div class="hero__slide swiper-slide"><img src="./images/hero-slide-1.webp" alt=""></div>
-		<div class="hero__slide swiper-slide"><img src="./images/hero-slide-2.webp" alt=""></div>
-		<div class="hero__slide swiper-slide"><img src="./images/hero-slide-3.webp" alt=""></div>
-		<div class="hero__slide swiper-slide"><img src="./images/hero-slide-4.webp" alt=""></div>
+		<div class="swiper-wrapper">
+			<div class="hero__slide swiper-slide"><img src="./images/hero-slide-0.webp" alt=""></div>
+			<div class="hero__slide swiper-slide"><img src="./images/hero-slide-1.webp" alt=""></div>
+			<div class="hero__slide swiper-slide"><img src="./images/hero-slide-2.webp" alt=""></div>
+			<div class="hero__slide swiper-slide"><img src="./images/hero-slide-3.webp" alt=""></div>
+			<div class="hero__slide swiper-slide"><img src="./images/hero-slide-4.webp" alt=""></div>
+		</div>
 	</div>
-	<button class="hero__prev"><img src="./images/arr-left.svg" alt=""></button>
-	<button class="hero__next"><img src="./images/arr-right.svg" alt=""></button>
+	<button class="hero__button hero__button_prev"><svg><use xlink:href="#icon-prev"></use></svg></button>
+	<button class="hero__button hero__button_next"><svg><use xlink:href="#icon-next"></use></svg></button>
 	<div class="hero__pagination"></div>
 </section>
 
@@ -55,53 +58,184 @@
 	</div>
 	<div class="about__cards">
 		<div class="about__card">
-			<h3>Консолидация исторических объектов в Старице с целью их реставрациии и приспособления под цели гостеприимства: гостиницы, кафе, торговые площади</h3>
-			<div class="about__icon"><img src="./images/about-icon-1.svg" alt=""></div>
+			<h3 class="about__card-text">Консолидация исторических объектов<br> в Старице с целью<br> их реставрациии<br> и приспособления<br> под цели гостеприимства: гостиницы, кафе,<br> торговые площади</h3>
+			<div class="about__card-icon"><img src="./images/about-icon-1.svg" alt=""></div>
 		</div>
 		<div class="about__card">
-			<h3>Создание учебных программ в сфере гостеприимства</h3>
-			<div class="about__icon"><img src="./images/about-icon-2.svg" alt=""></div>
+			<h3 class="about__card-text">Создание учебных программ в сфере гостеприимства</h3>
+			<div class="about__card-icon"><img src="./images/about-icon-2.svg" alt=""></div>
 		</div>
 		<div class="about__card">
-			<h3>Разработка и запуск новых туристических маршрутов</h3>
-			<div class="about__icon"><img src="./images/about-icon-3.svg" alt=""></div>
+			<h3 class="about__card-text">Разработка<br> и запуск новых туристических<br> маршрутов</h3>
+			<div class="about__card-icon"><img src="./images/about-icon-3.svg" alt=""></div>
 		</div>
 		<div class="about__card">
-			<h3>Создание в Старице туристического магнита и территориальный маркетинг</h3>
-			<div class="about__icon"><img src="./images/about-icon-4.svg" alt=""></div>
+			<h3 class="about__card-text">Создание в Старице туристического магнита<br> и территориальный маркетинг</h3>
+			<div class="about__card-icon"><img src="./images/about-icon-4.svg" alt=""></div>
 		</div>
 	</div>
-	<hr class="about__wave">
 </section>
 
 <section class="town">
 	<div class="town__inner container">
 		<h2 class="town__title title">О Старице</h2>
 		<div class="town__cards">
-			<div class="town__card">
-				<div class="town__image"><img src="./images/town-image-1.webp" alt=""></div>
-				<div class="town__text">В 1110 году был основан Свято-Успенский монастырь — сейчас один из старейших в России. В 1297 году вокруг него возник город Старица. Сейчас история повторяется: в десятых годах ХХ века Фонд возрождения Свято-Успенского монастыря вернул ему архитектурно-исторический облик, и одновременно город стал возвращаться к жизни.</div>
+			<a class="town__card" href="./">
+				<div class="town__card-image"><img src="./images/town-image-1.webp" alt=""></div>
+				<div class="town__card-text">В 1110 году был основан Свято-Успенский монастырь — сейчас один из старейших в России. В 1297 году вокруг него возник город Старица. Сейчас история повторяется: в десятых годах ХХ века Фонд возрождения Свято-Успенского монастыря вернул ему архитектурно-исторический облик, и одновременно город стал возвращаться к жизни.</div>
+			</a>
+			<a class="town__card" href="./">
+				<div class="town__card-image"><img src="./images/town-image-2.webp" alt=""></div>
+				<div class="town__card-text">Благодаря активной работе местной администрации за последнюю четверть века в городе провели полную газификацию, открыли новую поликлинику и современный парк «Старицкое Зарядье», благоустроили набережную вдоль Волги.</div>
+			</a>
+			<a class="town__card" href="./">
+				<div class="town__card-image"><img src="./images/town-image-3.webp" alt=""></div>
+				<div class="town__card-text">Тут родился и служил первый патриарх Московский и Всея Руси Иов, здесь часто бывал и Иван Грозный — он называл ее «Любим-город», Старицкий уезд был плодотворным и для «солнца русской поэзии» — Пушкин написал в этих краях не менее 20 лирических произведений.</div>
+			</a>
+			<a class="town__card" href="./">
+				<div class="town__card-image"><img src="./images/town-image-4.webp" alt=""></div>
+				<div class="town__card-text">Старица ждет новых туристов, для них скоро будут построены качественные отели и рестораны, а также разработаны и запущены новые современные маршруты. Эту миссию и берет на себя компания «Новый город».</div>
+			</a>
+		</div>
+	</div>
+	<div class="town__bottom">
+		<div class="town__bottom-inner">
+			<div class="town__bottom-text"><span>3 часа</span> по скоростной трассе занимает сейчас дорога от Москвы до Старицы, в то время как Пушкин добирался двое суток</div>
+			<div class="town__bottom-image">
+				<img src="./images/rider.svg" alt="">
 			</div>
-			<div class="town__card">
-				<div class="town__image"><img src="./images/town-image-2.webp" alt=""></div>
-				<div class="town__text">Благодаря активной работе местной администрации за последнюю четверть века в городе провели полную газификацию, открыли новую поликлинику и современный парк «Старицкое Зарядье», благоустроили набережную вдоль Волги.</div>
+		</div>
+	</div>
+</section>
+
+<section class="objects">
+	<div class="objects__inner container">
+		<h2 class="objects__title title">Объекты</h2>
+		<div class="objects__image"><img src="./images/objects-image.webp" alt=""></div>
+		<div class="objects__text">
+			<p>Компания «Новый город» начала процесс приспособления под современное использование старинных зданий в Старице, имеющих статус памятников культурного наследия регионального значения.</p>
+			<ul>
+				<li>Дом купца Филиппова</li>
+				<li>Два дома по ул. Пушкина</li>
+				<li>Бывшая швейная фабрика</li>
+			</ul>
+		</div>
+	</div>
+</section>
+
+<section class="market">
+	<div class="market__inner container">
+		<h2 class="market__title title">Маркетинг территории</h2>
+		<div class="market__text">Чтобы создать здесь туристический магнит федерального значения, компания «Новый город» занимается территориальным маркетингом — Старица должна занять достойное место на туристической карте России. В планах на ближайшие годы:</div>
+		<div class="market__cards">
+			<div class="market__card">
+				<div class="market__card-text">Создание и внедрение дизайн-кода Старицы: логотип города также сможет стать «зонтичным» брендом для малых бизнесов, которые базируются в округе.</div>
 			</div>
-			<div class="town__card">
-				<div class="town__image"><img src="./images/town-image-3.webp" alt=""></div>
-				<div class="town__text">Тут родился и служил первый патриарх Московский и Всея Руси Иов, здесь часто бывал и Иван Грозный — он называл ее «Любим-город», Старицкий уезд был плодотворным и для «солнца русской поэзии» — Пушкин написал в этих краях не менее 20 лирических произведений.</div>
+			<div class="market__card">
+				<div class="market__card-text">Разработка и запуск новых туристических маршрутов: культурных, исторических, спортивных.</div>
 			</div>
-			<div class="town__card">
-				<div class="town__image"><img src="./images/town-image-4.webp" alt=""></div>
-				<div class="town__text">Старица ждет новых туристов, для них скоро будут построены качественные отели и рестораны, а также разработаны и запущены новые современные маршруты. Эту миссию и берет на себя компания «Новый город».</div>
+			<div class="market__card">
+				<div class="market__card-text">Наполнение собственных туристических объектов, а также помощь округу в планировании и благоустройстве прогулочных зон и экотроп.</div>
+			</div>
+			<div class="market__card">
+				<div class="market__card-text">Создание единого инфоцентра для гостей Старицы — как онлайн, в виде сайта и соцсетей, так и оффлайн — туристический офис с кафе в центре города.</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="news">
+	<div class="news__inner container">
+		<h2 class="news__title title">Новости</h2>
+		<div class="news__slider swiper">
+			<div class="swiper-wrapper">
+				<div class="news__slide swiper-slide">
+					<div class="news__slide-image">
+						<img src="./images/news-image-1.webp" alt="">
+					</div>
+					<h3 class="news__slide-title">Зону строительства оформили граффити</h3>
+					<div class="news__slide-text">Компания «Новый город» начала сотрудничество с федеральным агентством по делам молодежи (Росмолодежь) — баннеры, закрывающие строительные...</div>
+					<div class="news__slide-date">07.06.2024</div>
+					<a class="news__slide-button" href="./">Подробнее</a>
+				</div>
+				<div class="news__slide swiper-slide">
+					<div class="news__slide-image">
+						<img src="./images/news-image-2.webp" alt="">
+					</div>
+					<h3 class="news__slide-title">«Ведомости» о новой Старице</h3>
+					<div class="news__slide-text">Вышла большая <a href="./">статья в газете «Ведомости»</a>, посвященная новой жизни Старицы и ее ключевом меценате — экс-вице-премьере России, общественном деятеле Викторе Христенко ...</div>
+					<div class="news__slide-date">09.09.2024</div>
+					<a class="news__slide-button" href="./">Подробнее</a>
+				</div>
+				<div class="news__slide swiper-slide">
+					<div class="news__slide-image">
+						<img src="./images/news-image-3.webp" alt="">
+					</div>
+					<h3 class="news__slide-title">«Новый город» плюс Высшая школа экономики</h3>
+					<div class="news__slide-text">В конце сентября в Старице начинают работать студенты факультета дизайна среды Высшей школы экономики (ВШЭ). В качестве темы дипломной работы группа ...</div>
+					<div class="news__slide-date">15.09.2024</div>
+					<a class="news__slide-button" href="./">Подробнее</a>
+				</div>
+			</div>
+			<button class="news__button news__button_prev"><svg><use xlink:href="#icon-prev"></use></svg></button>
+			<button class="news__button news__button_next"><svg><use xlink:href="#icon-next"></use></svg></button>
+		</div>
+	</div>
+</section>
+
+<section class="team">
+	<div class="team__inner container">
+		<h2 class="team__title title">Команда</h2>
+		<div class="team__slider swiper">
+			<div class="swiper-wrapper">
+				<div class="team__slide swiper-slide">
+					<a class="team__slide-image" href="./">
+						<img src="./images/team-image-1.webp" alt="">
+					</a>
+					<div class="team__slide-name">Имя Фамилия</div>
+					<div class="team__slide-position">Генеральный директор</div>
+				</div>
+				<div class="team__slide swiper-slide">
+					<a class="team__slide-image" href="./">
+						<img src="./images/team-image-2.webp" alt="">
+					</a>
+					<div class="team__slide-name">Имя Фамилия</div>
+					<div class="team__slide-position">Директор по развитию</div>
+				</div>
+				<div class="team__slide swiper-slide">
+					<a class="team__slide-image" href="./">
+						<img src="./images/team-image-3.webp" alt="">
+					</a>
+					<div class="team__slide-name">Имя Фамилия</div>
+					<div class="team__slide-position">Главный проектировщик</div>
+				</div>
+				<button class="team__button team__button_prev"><svg><use xlink:href="#icon-prev"></use></svg></button>
+				<button class="team__button team__button_next"><svg><use xlink:href="#icon-next"></use></svg></button>
 			</div>
 		</div>
 	</div>
 </section>
 
 <footer class="footer"> 
-  
+	<div class="footer__inner container">
+		<div class="footer__col">
+			<h2 class="footer__col-title">Контакты</h2>
+			<a class="footer__col-link" href="./">noviygorod_@_mail</a>
+			<a class="footer__col-link" href="./">+7 (777) 777 77 77</a>
+			<a class="footer__col-link" href="./">г. Старица, ул. Старицкая д1, офис 1</a>
+		</div>
+		<div class="footer__col">
+			<h3 class="footer__col-subtitle">Пресс-офис:</h3>
+			<a class="footer__col-link" href="./">noviygorod_@_mail</a>
+			<a class="footer__col-link" href="./">+7 (777) 777 77 77</a>
+		</div>
+		<div class="footer__col">
+			<a class="footer__col-button" href="./">Вакансии</a>
+		</div>
+	</div>
 </footer>
 
+<svg class="sprite" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol viewBox="0 0 38 38" id="icon-close" xmlns="http://www.w3.org/2000/svg"><path d="m10.5 9 18.385 18.385-1.414 1.414L9.086 10.414z"/><path d="M28.8 10.5 10.415 28.885 9.001 27.47 27.386 9.086z"/></symbol><symbol viewBox="0 0 29 16" id="icon-menu" xmlns="http://www.w3.org/2000/svg"><path d="M7 0h22v2H7V0ZM0 7h29v2H0V7ZM15 14h14v2H15v-2Z"/></symbol><symbol viewBox="0 0 10 17" id="icon-next" xmlns="http://www.w3.org/2000/svg"><path d="M10 8.516 1.515 17 .1 15.587l7.07-7.071L.454 1.797 1.868.383 10 8.516Z"/></symbol><symbol viewBox="0 0 10 17" id="icon-prev" xmlns="http://www.w3.org/2000/svg"><path d="M0 8.484 8.485 0 9.9 1.413 2.83 8.484l6.718 6.719-1.415 1.414L0 8.484Z"/></symbol></svg>
 <script src="common.js"></script> 
 </body> 
 </html>

@@ -8,7 +8,7 @@
 }
 
 // Include breakpoints badge
-body { @include screen-media(); }
+// body { @include screen-media(); }
 
 // Import media-query helper
 @import "../../node_modules/include-media/dist/_include-media.scss";
@@ -49,7 +49,7 @@ $breakpoints: (
 
 :root {
 	--size: #{$basesize}px;
-	--container: 1240px;
+	--container: 1200px;
 	--gap: 24px;
 	--accent: 53, 84, 25;
 	--accident: 190, 197, 49;
@@ -64,15 +64,36 @@ body, html {
 	// scrollbar-gutter: stable;
 	// scroll-behavior: smooth;	
 	box-sizing: border-box;
-	background-color: #fafafa;
+	background-color: #fff;
 	font-size: var(--size);
-	font-family: sans-serif;
+	font-family: "GP", sans-serif;
 	line-height: 1.2;
 	font-weight: 400;
 	min-height: 100vh;
 	display: flex;
 	flex-flow: column nowrap;
 }
+
+body.underlay {
+	&::before {
+		display: block;
+		box-sizing: border-box;
+		content: '';
+		position: fixed;
+		z-index: 12;
+		top: 0px; left: 0px;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.7);
+		transition: opacity 0.4s;
+		animation: showItem 0.4s;
+	}
+
+	&_closing::before {
+		opacity: 0;
+	}
+}
+
 // .main { flex: 1 0 auto; }
 .footer {
 	flex: 0 0 auto; 
@@ -86,6 +107,11 @@ body, html {
 p { margin-bottom: 10px; }
 strong { font-weight: bold; }
 em { font-style: italic; }
+
+@keyframes showItem {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
 
 .mb1 { margin-bottom: 100px; }
 .mb2 { margin-bottom: 60px; }
