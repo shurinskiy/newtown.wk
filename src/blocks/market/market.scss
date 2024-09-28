@@ -2,27 +2,91 @@
 	$self: &;
 	padding-top: 50px;
 
+	&::after {
+		display: block;
+		content: '';
+		height: 20px;
+		background: url('#{$images-path}arch-3.svg') center / 100px 18px repeat-x transparent;
+		max-width: var(--container);
+		width: calc(100% - var(--gap) * 2);
+		margin: 0 auto;
+	}
+
 	&__inner {
 
 	}
 
 	&__title {
-
+		margin-bottom: 30px;
 	}
 
 	&__text {
-
+		font-size: 20px;
+		max-width: 890px;
+		margin: 0 auto;
+		line-height: 1.0;
+		margin-bottom: 40px;
 	}
 
 	&__cards {
-
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 35px 90px;
+		margin-bottom: 40px;
 	}
 
 	&__card {
+		box-sizing: border-box;
+		position: relative;
+		min-height: 270px;
+		background-color: #fff;
+		border: 4px solid #DFE298;
+		border-radius: 10px;
+		padding: 20px;
+		display: flex;
+		align-items: center;
+		text-decoration: none;
+		color: inherit;
+		transition: background-color 0.3s, border-color 0.3s;
+		
+		&:hover {
+			background-color: rgb(var(--accident));
+			border-color: rgb(var(--accident));
+			color: #fff;
 
+			svg {
+				fill: #95A339;
+			}
+		}
+		
+		svg {
+			display: block;
+			position: absolute;
+			z-index: 1;
+			top: -4px; 
+			fill: #DFE298;
+			width: 500px;
+			height: 272px;
+			max-width: calc(100% + 8px);
+			max-height: calc(100% + 8px);
+			transition: fill 0.3s;
+		}
+
+		&:nth-child(odd) svg {
+			right: -5px;
+		}
+
+		&:nth-child(even) svg {
+			left: -5px;
+		}
 	}
-
+	
 	&__card-text {
-
+		box-sizing: border-box;
+		position: relative;
+		z-index: 2;
+		max-width: 440px;
+		margin: 0 auto;
+		padding-right: 90px;
 	}
 }

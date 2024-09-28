@@ -1,51 +1,122 @@
 .news {
 	$self: &;
+	padding-top: 50px;
 
-	&__inner {
-
+	&::after {
+		display: block;
+		content: '';
+		height: 20px;
+		background: url('#{$images-path}arch-2.svg') center / 100px 18px repeat-x transparent;
+		max-width: var(--container);
+		width: calc(100% - var(--gap) * 2);
+		margin: 0 auto;
 	}
-
+	
 	&__title {
-
+		margin-bottom: 30px;
+	}
+	
+	&__inner {
+		box-sizing: border-box;
+		max-width: 1400px;
+		padding: 0 100px;
+		margin-bottom: 40px;
+		position: relative;
 	}
 
 	&__slider {
-
+		position: static;
 	}
 
 	&__slide {
-
+		display: flex;
+		flex-flow: column nowrap;
+		align-items: stretch;
+		height: auto;
 	}
 
 	&__slide-image {
+		overflow: hidden;
+		border-radius: 10px;
+		margin-bottom: 40px;
 
+		img {
+			display: block;
+			width: 100%;
+		}
 	}
 
 	&__slide-title {
-
+		font-size: 20px;
+		font-weight: 700;
+		margin-bottom: 15px;
 	}
-
+	
 	&__slide-text {
+		margin-bottom: 15px;
 
+		a {
+			color: #0066FF;
+		}
 	}
-
+	
 	&__slide-date {
-
+		margin-bottom: 25px;
 	}
 
 	&__slide-button {
-
+		display: block;
+		margin-top: auto;
+		width: fit-content;
+		padding: 10px 20px;
+		text-decoration: none;
+		color: #fff;
+		border-radius: 10px;
+		background-color: rgb(var(--accident));
+		transition: background-color 0.3s;
+		font-size: 14px;
+		
+		&:hover {
+			background-color: rgb(var(--accent));
+		}
 	}
 
 	&__button {
+		@extend %reset-button;
 		position: absolute;
+		border-radius: 100px;
+		height: 54px;
+		width: 54px;
+		z-index: 1;
+		top: 25%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: background-color 0.3s;
+	
+		&:hover {
+			background-color: rgba(var(--accident), 0.8);
+
+			svg {
+				opacity: 1;
+			}
+		}
+
+		img, svg {
+			display: block;
+			width: 13px;
+			height: 23px;
+			fill: rgba(var(--accent));
+			transition: opacity 0.3s;
+			opacity: 0.5;
+		}
 
 		&_prev {
-
+			left: 0;
 		}
 		
 		&_next {
-
+			right: 0;
 		}
 	}
 }

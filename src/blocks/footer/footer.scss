@@ -1,28 +1,67 @@
 .footer {
 	$self: &;
-
+	background-color: rgb(var(--accent));
+	padding: 60px 0;
+	color: #fff;
+	
 	&__inner {
-
+		background: url('#{$images-path}footer-wave.svg') center / auto repeat-x transparent;
 	}
-
+	
+	&__cols {
+		display: flex;
+		max-width: var(--container);
+	}
+	
 	&__col {
+		box-sizing: border-box;
+		padding: 80px 20px 35px 0;
+		background-color: rgb(var(--accent));
+		width: 100%;
 
+		&:nth-child(1) {
+			max-width: 410px;
+		}
+
+		&:nth-child(2) {
+			max-width: 290px;
+		}
+
+		&:nth-child(3) {
+			max-width: 310px;
+		}
 	}
-
+	
 	&__col-title {
-
+		font-family: "RB", sans-serif;
+		color: rgb(var(--accident));
+		font-size: 24px;
+		margin-top: -80px;
+		margin-bottom: 50px;
 	}
-
+	
 	&__col-link {
-
+		display: block;
+		color: #fff;
+		text-decoration: none;
+		margin-bottom: 15px;
 	}
-
+	
 	&__col-subtitle {
-
+		font-weight: 500;
+		margin-bottom: 15px;
 	}
-
+	
 	&__col-button {
-
+		display: block;
+		background-color: rgb(var(--accident));
+		color: rgb(var(--accent));
+		text-transform: uppercase;
+		text-decoration: none;
+		font-size: 18px;
+		font-weight: 700;
+		padding: 14px 25px;
+		width: fit-content;
+		border-radius: 10px;
 	}
-
 }

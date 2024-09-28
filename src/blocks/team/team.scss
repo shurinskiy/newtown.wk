@@ -1,16 +1,23 @@
 .team {
 	$self: &;
+	padding-top: 50px;
+	margin-bottom: 80px;
+	
+	&__title {
+		margin-bottom: 30px;
+	}
 
 	&__inner {
-
+		box-sizing: border-box;
+		max-width: 1400px;
+		padding: 0 100px;
+		margin-bottom: 40px;
+		position: relative;
 	}
-
-	&__title {
-
-	}
-
+	
 	&__slider {
-
+		position: static;
+		padding-top: 30px;
 	}
 
 	&__slide {
@@ -18,26 +25,72 @@
 	}
 
 	&__slide-image {
+		display: block;
+		width: 100%;
+		max-width: 200px;
+		aspect-ratio: 1;
+		border-radius: 200px;
+		overflow: hidden;
+		margin: 0 auto 55px;
+		transition: transform 0.3s;
 
+		img {
+			display: block;
+			width: 100%;
+		}
+
+		&:hover {
+			transform: scale(1.25);
+		}
 	}
 
 	&__slide-name {
-
+		text-align: center;
+		font-weight: 700;
+		font-size: 20px;
+		margin-bottom: 15px;
 	}
-
+	
 	&__slide-position {
-
+		text-align: center;
 	}
 
 	&__button {
+		@extend %reset-button;
 		position: absolute;
+		border-radius: 100px;
+		height: 54px;
+		width: 54px;
+		z-index: 1;
+		top: 25%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: background-color 0.3s;
+	
+		&:hover {
+			background-color: rgba(var(--accident), 0.8);
+
+			svg {
+				opacity: 1;
+			}
+		}
+
+		img, svg {
+			display: block;
+			width: 13px;
+			height: 23px;
+			fill: rgba(var(--accent));
+			transition: opacity 0.3s;
+			opacity: 0.5;
+		}
 
 		&_prev {
-
+			left: 0;
 		}
 		
 		&_next {
-
+			right: 0;
 		}
 	}
 }

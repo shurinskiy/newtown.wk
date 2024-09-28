@@ -22,6 +22,8 @@
 
 	&__image {
 		margin-bottom: 40px;
+		overflow: hidden;
+		border-radius: 10px;
 	}
 
 	&__text {
@@ -31,7 +33,31 @@
 		
 		ul {
 			font-size: 16px;
+			counter-reset: item_ctr;
 
+			li {
+				padding: 5px 0 5px 38px;
+				position: relative;
+
+				&::before {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					counter-increment: item_ctr;
+					content: counter(item_ctr);
+					font-family: "RB", sans-serif;
+					line-height: 0.8;
+					font-size: 14px;
+					width: 24px;
+					height: 24px;
+					border-radius: 100px;
+					color: rgb(var(--accent));
+					background-color: rgb(var(--accident));
+					position: absolute;
+					left: 0;
+					top: 3px;
+				}
+			}
 		}
 	}
 }
