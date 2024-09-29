@@ -40,15 +40,27 @@
 		
 		&:hover {
 			background-color: rgb(var(--accident));
+
+			#{$self}__card-image {
+				filter: none;
+				transform: scale(1.15);
+			}
 		}
 	}
-
+	
 	&__card-image {
 		width: 119px;
 		height: 119px;
 		border-radius: 200px;
 		overflow: hidden;
+		backface-visibility: hidden;
 		margin-bottom: 20px;
+		transition: filter 0.3s, transform 0.3s;
+		filter: saturate(0);
+		
+		img {
+			display: block;
+		}
 	}
 
 	&__card-text {

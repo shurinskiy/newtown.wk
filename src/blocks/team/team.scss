@@ -31,6 +31,7 @@
 		aspect-ratio: 1;
 		border-radius: 200px;
 		overflow: hidden;
+		backface-visibility: hidden;
 		margin: 0 auto 55px;
 		transition: transform 0.3s;
 

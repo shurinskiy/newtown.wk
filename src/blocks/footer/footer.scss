@@ -6,29 +6,45 @@
 	
 	&__inner {
 		background: url('#{$images-path}footer-wave.svg') center / auto repeat-x transparent;
+		
+		@include media('<=sm') {
+			background: none;
+			padding-right: var(--gap);
+		}
 	}
 	
 	&__cols {
 		display: flex;
 		max-width: var(--container);
+		// align-items: stretch;
+
+		@include media('<=sm') {
+			flex-flow: column nowrap;
+		}
 	}
 	
 	&__col {
 		box-sizing: border-box;
-		padding: 80px 20px 35px 0;
+		padding: 80px 30px 35px 0;
 		background-color: rgb(var(--accent));
 		width: 100%;
-
-		&:nth-child(1) {
-			max-width: 410px;
+		
+		@include media('>sm') {
+			&:nth-child(1) {
+				max-width: 410px;
+			}
+			
+			&:nth-child(2) {
+				max-width: 290px;
+			}
+			
+			&:nth-child(3) {
+				max-width: 310px;
+			}
 		}
-
-		&:nth-child(2) {
-			max-width: 290px;
-		}
-
-		&:nth-child(3) {
-			max-width: 310px;
+		
+		@include media('<=sm') {
+			padding: 40px 0 0 0;
 		}
 	}
 	
@@ -38,6 +54,14 @@
 		font-size: 24px;
 		margin-top: -80px;
 		margin-bottom: 50px;
+		
+		@include media('<=sm') {
+			margin-top: -40px;
+		}
+		
+		@include media('<=xxs') {
+			font-size: 22px;
+		}
 	}
 	
 	&__col-link {
@@ -45,6 +69,10 @@
 		color: #fff;
 		text-decoration: none;
 		margin-bottom: 15px;
+		
+		@include media('<=xxs') {
+			font-size: 14px;
+		}
 	}
 	
 	&__col-subtitle {
@@ -53,15 +81,27 @@
 	}
 	
 	&__col-button {
-		display: block;
+		box-sizing: border-box;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		background-color: rgb(var(--accident));
 		color: rgb(var(--accent));
 		text-transform: uppercase;
 		text-decoration: none;
+		text-align: center;
 		font-size: 18px;
 		font-weight: 700;
-		padding: 14px 25px;
+		padding: 10px 25px;
 		width: fit-content;
+		min-height: 50px;
 		border-radius: 10px;
+		
+		@include media('<=xxs') {
+			font-size: 16px;
+			min-height: 40px;
+			padding: 10px 15px;
+			border-radius: 5px;
+		}
 	}
 }
