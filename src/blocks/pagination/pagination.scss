@@ -1,0 +1,41 @@
+.pagination {
+	$self: &;
+	display: flex;
+	align-items: center;
+
+	&__link {
+		padding: 0 15px;
+		font-size: 20px;
+		text-decoration: none;
+		color: rgb(var(--accent));
+
+		&.active {
+			font-weight: 700;
+		}
+
+		&_prev {
+			
+		}
+
+		&_next {
+			
+		}
+
+		svg {
+			display: block;
+			width: 13px;
+			height: 23px;
+			fill: rgba(var(--accent), 0.5);
+			transition: fill 0.3s, transform 0.3s;
+		}
+		
+		&:hover {
+			font-weight: 700;
+
+			svg {
+				fill: rgb(var(--accent));
+				transform: scale(1.2);
+			}			
+		}
+	}
+}

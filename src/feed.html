@@ -1,6 +1,87 @@
-@@include("_head.html", {"id":"home"}) 
+@@include("_head.html") 
 @@include("_header.html") 
 
-
+<section class="feed">
+	<div class="feed__inner container">
+		<div class="feed__cards">
+			@@include("_card.html", {
+				cls: "feed__card",
+				image: "news-image-1.webp",
+				title: "Зону строительства оформили граффити",
+				text: "Компания «Новый город» начала сотрудничество с федеральным агентством по делам молодежи (Росмолодежь) — баннеры, закрывающие строительные...",
+				date: "07.06.2024"
+			})
+			@@include("_card.html", {
+				cls: "feed__card",
+				image: "news-image-2.webp",
+				title: "«Новый город» плюс Высшая школа экономики",
+				text: "В конце сентября в Старице начинают работать студенты факультета дизайна среды Высшей школы экономики (ВШЭ). В качестве темы дипломной работы группа...",
+				date: "15.09.2024"
+			})
+			@@include("_card.html", {
+				cls: "feed__card",
+				image: "news-image-3.webp",
+				title: "«Ведомости» о новой Старице",
+				text: "Вышла большая <a href='./'>статья в газете «Ведомости»</a>, посвященная новой жизни Старицы и ее ключевом меценате — экс-вице-премьере России, общественном деятеле Викторе Христенко...",
+				date: "09.09.2024"
+			})
+			@@include("_card.html", {
+				cls: "feed__card",
+				image: "news-image-1.webp",
+				title: "Зону строительства оформили граффити",
+				text: "Компания «Новый город» начала сотрудничество с федеральным агентством по делам молодежи (Росмолодежь) — баннеры, закрывающие строительные...",
+				date: "07.06.2024"
+			})
+			@@include("_card.html", {
+				cls: "feed__card",
+				image: "news-image-2.webp",
+				title: "«Новый город» плюс Высшая школа экономики",
+				text: "В конце сентября в Старице начинают работать студенты факультета дизайна среды Высшей школы экономики (ВШЭ). В качестве темы дипломной работы группа...",
+				date: "15.09.2024"
+			})
+			@@include("_card.html", {
+				cls: "feed__card",
+				image: "news-image-3.webp",
+				title: "«Ведомости» о новой Старице",
+				text: "Вышла большая <a href='./'>статья в газете «Ведомости»</a>, посвященная новой жизни Старицы и ее ключевом меценате — экс-вице-премьере России, общественном деятеле Викторе Христенко...",
+				date: "09.09.2024"
+			})
+			@@include("_card.html", {
+				cls: "feed__card",
+				image: "news-image-1.webp",
+				title: "Зону строительства оформили граффити",
+				text: "Компания «Новый город» начала сотрудничество с федеральным агентством по делам молодежи (Росмолодежь) — баннеры, закрывающие строительные...",
+				date: "07.06.2024"
+			})
+			@@include("_card.html", {
+				cls: "feed__card",
+				image: "news-image-2.webp",
+				title: "«Новый город» плюс Высшая школа экономики",
+				text: "В конце сентября в Старице начинают работать студенты факультета дизайна среды Высшей школы экономики (ВШЭ). В качестве темы дипломной работы группа...",
+				date: "15.09.2024"
+			})
+			@@include("_card.html", {
+				cls: "feed__card",
+				image: "news-image-3.webp",
+				title: "«Ведомости» о новой Старице",
+				text: "Вышла большая <a href='./'>статья в газете «Ведомости»</a>, посвященная новой жизни Старицы и ее ключевом меценате — экс-вице-премьере России, общественном деятеле Викторе Христенко...",
+				date: "09.09.2024"
+			})
+		</div>
+		<div class="feed__pagination pagination">
+			<a class="pagination__link pagination__link_prev" href="./">
+				<svg><use xlink:href="#icon-prev"></use></svg>
+			</a>
+			<a class="pagination__link active" href="./">1</a>
+			<a class="pagination__link" href="./">2</a>
+			<a class="pagination__link" href="./">3</a>
+			<a class="pagination__link" href="./">4</a>
+			<a class="pagination__link" href="./">5</a>
+			<a class="pagination__link pagination__link_next" href="./">
+				<svg><use xlink:href="#icon-next"></use></svg>
+			</a>
+		</div>
+	</div>
+</section>
 
 @@include("_bottom.html")

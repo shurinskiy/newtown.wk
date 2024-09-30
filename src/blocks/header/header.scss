@@ -33,6 +33,10 @@
 
 		#{$self}__logo img {
 			height: 118px;
+			
+			@include media('<=xlg') {
+				height: 95px;
+			}
 		}
 	}
 
@@ -232,10 +236,6 @@
 			margin: 0 auto 15px;
 			height: 0;
 			transition: height 0.3s;
-			
-			@include media('<=xlg') {
-				height: 95px;
-			}
 		}
 
 		span {

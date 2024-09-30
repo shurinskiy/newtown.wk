@@ -74,6 +74,18 @@ body, html {
 	flex-flow: column nowrap;
 }
 
+body {
+	padding-top: 130px;
+	
+	@include media('<=md') {
+		padding-top: 50px;
+	}
+}
+
+body#home {
+	padding-top: 0;
+}
+
 body.underlay {
 	&::before {
 		display: block;

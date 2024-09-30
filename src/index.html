@@ -123,42 +123,34 @@
 	<div class="news__inner container">
 		<div class="news__slider swiper">
 			<div class="swiper-wrapper">
-				<div class="news__slide card swiper-slide">
-					<a class="card__image" href="./">
-						<img src="./images/news-image-1.webp" alt="">
-					</a>
-					<h3 class="card__title">Зону строительства оформили граффити</h3>
-					<div class="card__text">Компания «Новый город» начала сотрудничество с федеральным агентством по делам молодежи (Росмолодежь) — баннеры, закрывающие строительные...</div>
-					<div class="card__date">07.06.2024</div>
-					<a class="card__button" href="./">Подробнее</a>
-				</div>
-				<div class="news__slide card swiper-slide">
-					<a class="card__image" href="./">
-						<img src="./images/news-image-3.webp" alt="">
-					</a>
-					<h3 class="card__title">«Новый город» плюс Высшая школа экономики</h3>
-					<div class="card__text">В конце сентября в Старице начинают работать студенты факультета дизайна среды Высшей школы экономики (ВШЭ). В качестве темы дипломной работы группа...</div>
-					<div class="card__date">15.09.2024</div>
-					<a class="card__button" href="./">Подробнее</a>
-				</div>
-				<div class="news__slide card swiper-slide">
-					<a class="card__image" href="./">
-						<img src="./images/news-image-2.webp" alt="">
-					</a>
-					<h3 class="card__title">«Ведомости» о новой Старице</h3>
-					<div class="card__text">Вышла большая <a href="./">статья в газете «Ведомости»</a>, посвященная новой жизни Старицы и ее ключевом меценате — экс-вице-премьере России, общественном деятеле Викторе Христенко...</div>
-					<div class="card__date">09.09.2024</div>
-					<a class="card__button" href="./">Подробнее</a>
-				</div>
-				<div class="news__slide card swiper-slide">
-					<a class="card__image" href="./">
-						<img src="./images/news-image-3.webp" alt="">
-					</a>
-					<h3 class="card__title">«Новый город» плюс Высшая школа экономики</h3>
-					<div class="card__text">В конце сентября в Старице начинают работать студенты факультета дизайна среды Высшей школы экономики (ВШЭ). В качестве темы дипломной работы группа...</div>
-					<div class="card__date">15.09.2024</div>
-					<a class="card__button" href="./">Подробнее</a>
-				</div>
+				@@include("_card.html", {
+					cls: "news__slide swiper-slide",
+					image: "news-image-1.webp",
+					title: "Зону строительства оформили граффити",
+					text: "Компания «Новый город» начала сотрудничество с федеральным агентством по делам молодежи (Росмолодежь) — баннеры, закрывающие строительные...",
+					date: "07.06.2024"
+				})
+				@@include("_card.html", {
+					cls: "news__slide swiper-slide",
+					image: "news-image-2.webp",
+					title: "«Новый город» плюс Высшая школа экономики",
+					text: "В конце сентября в Старице начинают работать студенты факультета дизайна среды Высшей школы экономики (ВШЭ). В качестве темы дипломной работы группа...",
+					date: "15.09.2024"
+				})
+				@@include("_card.html", {
+					cls: "news__slide swiper-slide",
+					image: "news-image-3.webp",
+					title: "«Ведомости» о новой Старице",
+					text: "Вышла большая <a href='./'>статья в газете «Ведомости»</a>, посвященная новой жизни Старицы и ее ключевом меценате — экс-вице-премьере России, общественном деятеле Викторе Христенко...",
+					date: "09.09.2024"
+				})
+				@@include("_card.html", {
+					cls: "news__slide swiper-slide",
+					image: "news-image-2.webp",
+					title: "«Новый город» плюс Высшая школа экономики",
+					text: "В конце сентября в Старице начинают работать студенты факультета дизайна среды Высшей школы экономики (ВШЭ). В качестве темы дипломной работы группа...",
+					date: "15.09.2024"
+				})
 			</div>
 			<button class="news__button news__button_prev"><svg><use xlink:href="#icon-prev"></use></svg></button>
 			<button class="news__button news__button_next"><svg><use xlink:href="#icon-next"></use></svg></button>
