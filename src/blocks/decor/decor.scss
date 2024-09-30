@@ -1,0 +1,29 @@
+.decor {
+	$self: &;
+
+	&::after {
+		display: block;
+		content: '';
+		height: 20px;
+		background: url('#{$images-path}arch-2.svg') center / 100px 18px repeat-x transparent;
+		max-width: var(--container);
+		width: calc(100% - var(--gap) * 2);
+		margin: 0 auto;
+
+		@include media('<=lg') {
+			background-size: 75px 14px;
+		}
+
+		@include media('<=xs') {
+			background-size: 60px 12px;
+		}
+
+		@include media('<=xxxs') {
+			background-size: 50px 10px;
+		}
+	}
+
+	&_dark::after {
+		background-image: url('#{$images-path}arch-3.svg');		
+	}
+}

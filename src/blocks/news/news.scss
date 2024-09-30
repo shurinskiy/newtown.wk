@@ -1,16 +1,6 @@
 .news {
 	$self: &;
 	padding-top: 50px;
-
-	&::after {
-		display: block;
-		content: '';
-		height: 20px;
-		background: url('#{$images-path}arch-2.svg') center / 100px 18px repeat-x transparent;
-		max-width: var(--container);
-		width: calc(100% - var(--gap) * 2);
-		margin: 0 auto;
-	}
 	
 	&__title {
 		margin-bottom: 30px;
@@ -22,6 +12,22 @@
 		padding: 0 100px;
 		margin-bottom: 40px;
 		position: relative;
+
+		@include media('<=xlg') {
+			padding: 0 70px;
+		}
+
+		@include media('<=lg') {
+			padding: 0 50px;
+		}
+
+		@include media('<=sm') {
+			padding: 0 30px;
+		}
+		
+		@include media('<=xs') {
+			padding: 0;
+		}
 	}
 
 	&__slider {
@@ -44,6 +50,15 @@
 		align-items: center;
 		justify-content: center;
 		transition: background-color 0.3s;
+		
+		@include media('<=sm') {
+			height: 35px;
+			width: 35px;
+		}
+		
+		@include media('<=xs') {
+			display: none;
+		}
 	
 		&:hover {
 			background-color: rgba(var(--accident), 0.8);
@@ -60,14 +75,27 @@
 			fill: rgba(var(--accent));
 			transition: opacity 0.3s;
 			opacity: 0.5;
+			
+			@include media('<=sm') {
+				width: 10px;
+				height: 17px;
+			}
 		}
 
 		&_prev {
 			left: 0;
+			
+			@include media('<=lg') {
+				left: -15px;
+			}
 		}
 		
 		&_next {
 			right: 0;
+
+			@include media('<=lg') {
+				right: -15px;
+			}
 		}
 	}
 }

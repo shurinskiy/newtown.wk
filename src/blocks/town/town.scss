@@ -2,18 +2,10 @@
 	$self: &;
 	padding-top: 50px;
 
-	&::after {
-		display: block;
-		content: '';
-		height: 20px;
-		background: url('#{$images-path}arch-2.svg') center / 100px 18px repeat-x transparent;
-		max-width: var(--container);
-		width: calc(100% - var(--gap) * 2);
-		margin: 0 auto;
-	}
-
 	&__inner {
-
+		@include media('<=xs') {
+			margin-bottom: 180px;
+		}
 	}
 
 	&__title {
@@ -25,9 +17,22 @@
 		grid-template-columns: repeat(2, 1fr);
 		grid-gap: 35px 90px;
 		margin-bottom: 40px;
+		
+		@include media('<=lg') {
+			grid-gap: 35px;
+		}
+		
+		@include media('<=xs') {
+			grid-template-columns: 1fr;
+		}
+		
+		@include media('<=xxs') {
+			grid-gap: 20px;
+		}
 	}
 
 	&__card {
+		grid-column: span 1;
 		box-sizing: border-box;
 		border-radius: 10px;
 		border: 4px solid rgb(var(--accident));
@@ -37,13 +42,48 @@
 		text-decoration: none;
 		background-color: #fff;
 		transition: background-color 0.3s;
-		
-		&:hover {
+		position: relative;
+
+		&::before {
+			display: block;
+			content: '';
+			background-color: #fff;
 			background-color: rgb(var(--accident));
+			position: absolute;
+			z-index: 1;
+			bottom: 0; 
+			left: 0;
+			width: 100%;
+			height: 0;
+			transition: height 0.3s ease-out;
+		}
+		
+		@include media('<=md') {
+			padding: 20px 35px;
+		}
+		
+		@include media('<=sm') {
+			padding: 20px;
+			font-size: 15px;
+		}
+		
+		@include media('<=xs') {
+			min-height: 300px;
+		}
+		
+		@include media('<=xxs') {
+			font-size: 14px;
+		}
+
+		&:hover {
 
 			#{$self}__card-image {
 				filter: none;
 				transform: scale(1.15);
+			}
+
+			&::before {
+				height: 100%;
 			}
 		}
 	}
@@ -57,6 +97,8 @@
 		margin-bottom: 20px;
 		transition: filter 0.3s, transform 0.3s;
 		filter: saturate(0);
+		position: relative;
+		z-index: 2;
 		
 		img {
 			display: block;
@@ -64,7 +106,8 @@
 	}
 
 	&__card-text {
-
+		position: relative;
+		z-index: 2;
 	}
 
 	&__bottom {
@@ -73,6 +116,11 @@
 		width: calc(100% - var(--gap));
 		max-width: calc(100% - (100% - 1320px) / 2);
 		background: url('#{$images-path}town-wave.svg') center / auto repeat-x rgb(var(--accent));
+		border-radius: 0 10px 10px 0;
+
+		@include media('<=xs') {
+			background-image: none;
+		}
 	}
 	
 	&__bottom-inner {
@@ -80,6 +128,12 @@
 		max-width: 1320px;
 		display: flex;
 		background-color:  rgb(var(--accent));
+		padding-left: var(--gap);
+		
+		@include media('<=xs') {
+			flex-flow: column nowrap;
+			background: none;
+		}
 	}
 	
 	&__bottom-text {
@@ -91,17 +145,62 @@
 		max-width: 700px;
 		margin-right: auto;
 		
+		@include media('<=xlg') {
+			padding: 35px 0;
+			font-size: 18px;
+		}
+		
+		@include media('<=md') {
+			padding: 25px 0;
+			font-size: 16px;
+		}
+		
+		@include media('<=xs') {
+			padding: 35px 25px 35px 0;
+		}
+		
+		@include media('<=xxs') {
+			font-size: 15px;
+		}
+		
 		span {
 			font-size: 36px;
 			font-family: "RB", sans-serif;
+		
+			@include media('<=xlg') {
+				font-size: 32px;
+			}
+			
+			@include media('<=md') {
+				font-size: 28px;
+			}
+		
+			@include media('<=xxs') {
+				font-size: 24px;
+			}
 		}
 	}
 
 	&__bottom-image {
 		width: 440px;
+		max-width: 100%;
 		flex-shrink: 0;
 		position: relative;
 		background-color: #fff;
+		margin-left: auto;
+		
+		@include media('<=lg') {
+			width: 400px;
+		}
+		
+		@include media('<=md') {
+			width: 340px;
+		}
+		
+		@include media('<=xs') {
+			width: 360px;
+			order: -1;
+		}
 
 		&::before {
 			display: block;
@@ -117,8 +216,13 @@
 		
 		img {
 			position: absolute;
+			z-index: 1;
 			bottom: 0;
 			width: 100%;
+			
+			@include media('<=xs') {
+				bottom: -15px;
+			}
 		}
 	}
 }

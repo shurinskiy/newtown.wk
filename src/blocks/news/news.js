@@ -22,7 +22,15 @@ import { Navigation } from 'swiper/modules';
 					spaceBetween: 20,
 					slidesPerView: 2
 				},
-				780: {
+				960: {
+					spaceBetween: 20,
+					slidesPerView: 3
+				},
+				1100: {
+					spaceBetween: 30,
+					slidesPerView: 3
+				},
+				1280: {
 					spaceBetween: 40,
 					slidesPerView: 3
 				}

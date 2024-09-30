@@ -2,28 +2,6 @@
 	$self: &;
 	padding-top: 60px;
 
-	&::after {
-		display: block;
-		content: '';
-		height: 20px;
-		background: url('#{$images-path}arch-3.svg') center / 100px 18px repeat-x transparent;
-		max-width: var(--container);
-		width: calc(100% - var(--gap) * 2);
-		margin: 0 auto;
-
-		@include media('<=lg') {
-			background-size: 75px 14px;
-		}
-
-		@include media('<=xs') {
-			background-size: 60px 12px;
-		}
-
-		@include media('<=xxxs') {
-			background-size: 50px 10px;
-		}
-	}
-
 	&__top {
 
 	}
@@ -103,6 +81,49 @@
 			
 		}
 
+		&::before {
+			position: absolute;
+			display: block;
+			content: '';
+			top: 0;
+			height: 100%;
+			background-color: #fff;
+			transition: width 0.3s;
+			width: 0;
+		}
+
+		&:hover::before {
+			width: 150px;
+			
+			@include media('<=xxlg') {
+				width: 130px;
+			}
+			
+			@include media('<=xlg') {
+				width: 100px;
+			}
+			
+			@include media('<=lg') {
+				width: 85px;
+			}
+			
+			@include media('<=md') {
+				width: 80px;
+			}
+			
+			@include media('<=sm') {
+				width: 140px;
+			}
+			
+			@include media('<=xs') {
+				width: 120px;
+			}
+			
+			@include media('<=xxs') {
+				width: 100px;
+			}
+		}
+
 		&:nth-child(even) {
 			text-align: right;
 
@@ -138,6 +159,15 @@
 					transform: translateX(12px);
 				}
 			}
+
+			&::before {
+				left: 0;
+				
+				@include media('<=sm') {
+					left: auto;
+					right: 0;
+				}
+			}
 		}
 		
 		&:nth-child(odd) {
@@ -171,6 +201,10 @@
 					transform: translateX(12px);
 				}
 			}
+
+			&::before {
+				right: 0;
+			}
 		}
 	}
 	
@@ -181,6 +215,8 @@
 		font-size: 18px;
 		font-weight: 500;
 		line-height: 1.4;
+		position: relative;
+		z-index: 2;
 		
 		@include media('<=xxlg') {
 			font-size: 17px;
@@ -196,7 +232,7 @@
 				
 		@include media('<=sm') {
 			font-size: 17px;
-			max-width: 450px;
+			max-width: 420px;
 			margin: 0;
 		}
 		

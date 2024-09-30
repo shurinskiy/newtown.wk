@@ -36,6 +36,6 @@ import { menuToggle } from "../../js/libs/menuToggle";
 	});
 
 	// открытие и закрытие меню, свайпом на мобильных устройствах
-	navi.addEventListener('swiped-right', (e) => menu.menuClose(e));
+	navi.addEventListener('swiped-left', (e) => menu.menuClose(e));
 
 })();
