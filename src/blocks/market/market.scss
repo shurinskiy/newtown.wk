@@ -55,7 +55,7 @@
 		position: relative;
 		min-height: 271px;
 		background-color: #fff;
-		border: 4px solid #DFE298;
+		border: 4px solid rgba(var(--accident), 0.5);
 		border-radius: 10px;
 		padding: 20px;
 		display: flex;
@@ -67,21 +67,37 @@
 		@include media('<=md') {
 			min-height: 220px;
 		}
+
+		&::before {
+			display: block;
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			z-index: 1;
+			width: 100%;
+			background-color: rgb(var(--accident));
+			transition: height 0.3s ease-out;
+			height: 0;
+		}
 		
 		&:hover {
-			background-color: rgb(var(--accident));
 			border-color: rgb(var(--accident));
 			color: #fff;
 
+			&::before {
+				height: 100%;
+			}
+
 			svg {
-				fill: #95A339;
+				fill: rgba(var(--accent), 0.3);
 			}
 		}
 		
 		svg {
 			display: block;
 			position: absolute;
-			z-index: 1;
+			z-index: 2;
 			top: -4px; 
 			fill: #DFE298;
 			width: 500px;
@@ -107,7 +123,7 @@
 	&__card-text {
 		box-sizing: border-box;
 		position: relative;
-		z-index: 2;
+		z-index: 3;
 		max-width: 440px;
 		margin: 0 auto;
 		padding-right: 90px;

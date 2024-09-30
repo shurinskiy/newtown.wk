@@ -9,6 +9,8 @@
 	width: 100%;
 	height: 85px;
 	transition: background-color 0.3s;
+	background-color: #fff;
+	box-shadow: 0 5px 4px rgba(0, 0, 0, 0.03);
 	
 	@include media('<=xlg') {
 		height: 77px;
@@ -20,17 +22,17 @@
 		top: 0;
 	}
 	
-	&_visible {
-		background-color: #fff;
-		box-shadow: 0 5px 4px rgba(0, 0, 0, 0.03);
+	&_invisible {
+		background-color: transparent;
+		box-shadow: none;
 
 		#{$self}__menu-side {
-			opacity: 1;
-			visibility: visible;
+			opacity: 0;
+			visibility: hidden;
 		}
 
 		#{$self}__logo img {
-			height: 0;
+			height: 118px;
 		}
 	}
 
@@ -123,8 +125,6 @@
 			box-sizing: border-box;
 			display: flex;
 			align-items: center;
-			visibility: hidden;
-			opacity: 0;
 			width: calc(50% - 120px);
 			
 			@include media('<=xlg') {
@@ -230,7 +230,7 @@
 		img {
 			display: block;
 			margin: 0 auto 15px;
-			height: 118px;
+			height: 0;
 			transition: height 0.3s;
 			
 			@include media('<=xlg') {
