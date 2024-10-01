@@ -2,6 +2,7 @@
 	$self: &;
 	box-sizing: border-box;
 	height: 100vh;
+	height: 100svh;
 	display: flex;
 	position: relative;
 	z-index: 1;
@@ -13,6 +14,67 @@
 
 	&__slider {
 		max-width: 100%;
+
+		&-text {
+			pointer-events: none;
+			position: absolute;
+			inset: 0;
+			z-index: 2;
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: center;
+			color: #fff;
+			font-family: "RB", sans-serif;
+			font-size: 95px;
+			@include range(95px, 28px, 1680px, 480px);
+
+			p {
+				// width: calc(100% - var(--gap));
+				// max-width: 1200px;
+				box-sizing: border-box;
+				width: 65%;
+				display: block;
+				margin: 0 auto;
+				line-height: 0.8;
+				overflow: hidden;
+				white-space: nowrap;
+				
+				@include media('<=lg') {
+					width: 75%;
+				}
+				
+				@include media('<=xxs') {
+					width: 85%;
+				}
+				
+				@include media('<=xxxs') {
+					width: 95%;
+				}
+
+				&:nth-child(1) {
+					padding-bottom: 10px;
+					margin-bottom: 10px;
+					
+					@include media('<=md') {
+						padding-bottom: 5px;
+						margin-bottom: 8px;
+					}
+					
+					@include media('<=xs') {
+						padding-bottom: 2px;
+						margin-bottom: 5px;
+					}
+				}
+
+				&:nth-child(2) {
+					text-align: right;
+				}
+
+				span {
+					background-color: rgb(var(--accident));
+				}
+			}
+		}
 	}
 
 	&__slide {
@@ -32,7 +94,7 @@
 		border-radius: 100px;
 		height: 54px;
 		width: 54px;
-		z-index: 1;
+		z-index: 2;
 		top: calc(50% - 27px);
 		background-color: rgba(var(--accent), 0.8);
 		display: flex;
@@ -83,7 +145,7 @@
 		align-items: center;
 		justify-content: center;
 		position: absolute;
-		z-index: 2;
+		z-index: 3;
 		bottom: 50px;
 		left: 50%;
 		transform: translateX(-50%);

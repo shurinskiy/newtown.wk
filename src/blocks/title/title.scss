@@ -1,8 +1,22 @@
 .title {
 	$self: &;
+	box-sizing: border-box;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
 	font-size: 45px;
 	color: rgb(var(--accent));
-	text-transform: uppercase;
 	font-family: "RB", sans-serif;
 	@include range(45px, 28px, 1280px, 480px);
+	
+	span {
+		margin-right: auto;
+	}
+	
+	a {
+		font-family: "GP", sans-serif;
+		color: rgb(var(--accent));
+		font-size: 20px;
+		@include range(20px, 16px, 1280px, 480px);
+	}
 }

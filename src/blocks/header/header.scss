@@ -27,8 +27,10 @@
 		box-shadow: none;
 
 		#{$self}__menu-side {
-			opacity: 0;
-			visibility: hidden;
+			@include media('>md') {
+				opacity: 0;
+				visibility: hidden;
+			}
 		}
 
 		#{$self}__logo img {

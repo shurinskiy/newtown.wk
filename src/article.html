@@ -1,0 +1,62 @@
+@@include("_head.html", {"id": "post"}) 
+@@include("_header.html") 
+
+<section class="post mb2">
+	<div class="post__inner container">
+		<h1 class="post__title title mb3">«Ведомости» написали о новой Старице</h1>
+		<p>9 сентября 2024 года в газете «Ведомости» вышла <a href="./">большая статья</a> о новой жизни Старицы и ее ключевом меценате, экс-вице-премьере России и общественном деятеле Викторе Христенко. Представители компании «Новый город» рассказали журналистам о своих планах по созданию туристической инфраструктуры в старинном российском городке.</p>
+		<div class="post__image" data-signature="Фото: Иван Куринной">
+			<div class="post__image-wrapper">
+				<img src="./images/post-image.webp" alt="">
+			</div>
+		</div>
+		<p>После 2000-х годов, когда Старицу впервые посетил Виктор Христенко, она стала превращаться из заброшенного провинциального города в туристический бриллиант, в центре которого — восстановленный при участии мецената Свято-Успенский монастырь. Историческое прошлое города сохраняют и возрождают: так, «Новый город» при поддержке Фонда монастыря отреставрирует более 10 исторических зданий, откроет новые рестораны, культурные центры, магазины для местных промыслов.</p>
+		<div class="post__video" style="background-image: url('./images/post-video-preview.webp');">
+			<iframe class="post__video-frame" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+			<button class="post__video-play" data-youtube-src="https://www.youtube.com/embed/eaRQF-7hhmo?autoplay=1"></button>
+		</div>
+		<p>Стартовым мероприятием публичного запуска новой Старицы стал иммерсивный спектакль-прогулка по пушкинским местам города «Все мы Пушкин!» и театрализованное открытие памятника Пушкину, которые придумали и срежиссировали при участии «Нового города».</p>
+	</div>
+</section>
+
+<section class="news mb2">
+	<h2 class="news__title title container"><span>Другие новости</span> <a href="./news.html">Все новости</a></h2>
+	<div class="news__inner container">
+		<div class="news__slider swiper">
+			<div class="swiper-wrapper">
+				@@include("_card.html", {
+					cls: "news__slide swiper-slide",
+					image: "news-image-1.webp",
+					title: "Зону строительства оформили граффити",
+					text: "Компания «Новый город» начала сотрудничество с федеральным агентством по делам молодежи (Росмолодежь) — баннеры, закрывающие строительные...",
+					date: "07.06.2024"
+				})
+				@@include("_card.html", {
+					cls: "news__slide swiper-slide",
+					image: "news-image-2.webp",
+					title: "«Новый город» плюс Высшая школа экономики",
+					text: "В конце сентября в Старице начинают работать студенты факультета дизайна среды Высшей школы экономики (ВШЭ). В качестве темы дипломной работы группа...",
+					date: "15.09.2024"
+				})
+				@@include("_card.html", {
+					cls: "news__slide swiper-slide",
+					image: "news-image-3.webp",
+					title: "«Ведомости» о новой Старице",
+					text: "Вышла большая <a href='./'>статья в газете «Ведомости»</a>, посвященная новой жизни Старицы и ее ключевом меценате — экс-вице-премьере России, общественном деятеле Викторе Христенко...",
+					date: "09.09.2024"
+				})
+				@@include("_card.html", {
+					cls: "news__slide swiper-slide",
+					image: "news-image-2.webp",
+					title: "«Новый город» плюс Высшая школа экономики",
+					text: "В конце сентября в Старице начинают работать студенты факультета дизайна среды Высшей школы экономики (ВШЭ). В качестве темы дипломной работы группа...",
+					date: "15.09.2024"
+				})
+			</div>
+			<button class="news__button news__button_prev"><svg><use xlink:href="#icon-prev"></use></svg></button>
+			<button class="news__button news__button_next"><svg><use xlink:href="#icon-next"></use></svg></button>
+		</div>
+	</div>
+</section>
+
+@@include("_bottom.html")

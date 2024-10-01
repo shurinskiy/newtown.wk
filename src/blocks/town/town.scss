@@ -1,6 +1,5 @@
 .town {
 	$self: &;
-	padding-top: 50px;
 
 	&__inner {
 		@include media('<=xs') {
@@ -9,7 +8,7 @@
 	}
 
 	&__title {
-		margin-bottom: 30px;
+
 	}
 
 	&__cards {

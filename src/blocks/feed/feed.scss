@@ -1,7 +1,6 @@
 .feed {
 	$self: &;
 	padding-top: 70px;
-	margin-bottom: 100px;
 	
 	@include media('<=md') {
 		padding-top: 40px;
