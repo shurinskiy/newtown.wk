@@ -1,0 +1,114 @@
+.modal {
+	$self: &;
+	box-sizing: border-box;
+	display: none;
+	position: fixed;
+	z-index: 9999;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	height: 100dvh;
+	background-color: rgba(0, 0, 0, 0.9);
+	backdrop-filter: blur(3px);
+	padding: 30px;
+	overflow-y: auto;
+	@keyframes slideInDown {
+		from { opacity: 0; transform: translateY(-1000px); }
+		to { opacity: 1; transform: translateY(0); }
+	}
+	@keyframes show_fade { from { opacity: 0; } to { opacity: 1; }}
+	
+	@include media('<=xxs') {
+		padding: 15px;
+	}
+
+	&[style*="display: block"] {
+		display: flex !important;
+	}
+
+	&__hidden {
+		display: none;
+	}
+	
+	&__close {
+		position: absolute;
+		top: 10px; right: 10px;
+		cursor: pointer;
+		width: 40px;
+		height: 40px;
+		z-index: 3;
+		border-radius: 100px;
+		background: svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38 38" preserveAspectRatio="none"><defs><style>.line{fill:#fff;fill-rule:evenodd;}</style></defs><rect class="line" x="10.5" y="9" width="26" height="2" transform="rotate(45 10.5 9)"/><rect class="line" x="28.8" y="10.5" width="26" height="2" transform="rotate(135 28.8 10.5)"/></svg>') center / 34px 34px no-repeat rgba(255, 255, 255, 0.04);
+		transition: background-color 0.3s;
+		
+		&:hover {
+			background-color: rgba(255, 255, 255, 0.2);
+		}
+	}
+
+	&__body {
+		animation: slideInDown 0.7s ease both;
+		box-sizing: border-box;
+		background-color: #fff;
+		border-radius: 4px;
+		margin: auto;
+		width: 100%;
+		max-width: 1000px;
+		box-shadow: 0px 1px 10px 4px rgba(0, 0, 0, 0.07);
+	}
+	
+	&__content {
+		min-height: 200px;
+		
+		@include media('<=xxs') {
+			min-height: 140px;
+		}
+
+		&_slideshow {
+
+			img, video {
+				animation: show_fade 0.3s;
+				display: none;
+	
+				&.active {
+					display: block;
+				}
+			}
+		}
+	}
+	
+	&__prev, &__next {
+		@extend %reset-button;
+		height: 47px;
+		width: 47px;
+		border-radius: 50%;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 14px 21px;
+		
+		transition: background-color 0.3s, filter 0.3s;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		z-index: 2;
+		
+		@include media('<=xs') {
+			height: 50%;
+		}
+		
+		&:hover {
+			background-color: rgba(var(--accident), 0.8);
+		}
+	}
+
+	&__prev {
+		left: -70px;
+		background: svg-url('<svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.7327 19.6806C11.3568 20.0852 10.7241 20.1086 10.3194 19.7327L0.319425 10.4442C0.111657 10.2512 -0.00440876 9.97913 0.000110679 9.6956C0.00463012 9.41207 0.129311 9.14379 0.343123 8.95752L10.3431 0.245983C10.7596 -0.116791 11.3912 -0.0732936 11.754 0.343136C12.1168 0.759565 12.0733 1.39123 11.6568 1.75401L2.49502 9.73537L11.6805 18.2673C12.0852 18.6432 12.1085 19.2759 11.7327 19.6806Z" fill="#365419"/></svg>') center / 12px 20px no-repeat transparent;
+	}
+	
+	&__next {
+		right: -70px;
+		background: svg-url('<svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.267323 0.319445C0.643185 -0.0852101 1.27592 -0.108551 1.68058 0.267311L11.6806 9.55577C11.8883 9.74876 12.0044 10.0209 11.9999 10.3044C11.9954 10.5879 11.8707 10.8562 11.6569 11.0425L1.65688 19.754C1.24045 20.1168 0.608777 20.0733 0.246003 19.6569C-0.116772 19.2404 -0.0732753 18.6088 0.343154 18.246L9.50498 10.2646L0.319457 1.7327C-0.0851983 1.35683 -0.108539 0.7241 0.267323 0.319445Z" fill="#365419"/></svg>') center / 12px 20px no-repeat transparent;
+	}
+}

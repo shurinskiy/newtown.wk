@@ -3,15 +3,22 @@ import { Navigation } from 'swiper/modules';
 
 (() => {
 
-	document.querySelectorAll('.news__slider').forEach((item, i) => {
+	document.querySelectorAll('.slider').forEach((item, i) => {
 		new Swiper(item, {
 			modules: [Navigation],
 			watchOverflow: true,
 			loop: true,
 			threshold: 10,
 			navigation: {
-				nextEl: `.news__button_next`,
-				prevEl: `.news__button_prev`,
+				nextEl: `.slider__button_${i}.slider__button_next`,
+				prevEl: `.slider__button_${i}.slider__button_prev`,
+			},
+			on: {
+				beforeInit: function(el) {
+					item.querySelectorAll('.slider__button').forEach(button => {
+						button.classList.add(`slider__button_${i}`);
+					})
+				},
 			},
 			breakpoints: {
 				0: {
@@ -19,6 +26,10 @@ import { Navigation } from 'swiper/modules';
 					slidesPerView: 1.2
 				},
 				480: {
+					spaceBetween: 20,
+					slidesPerView: 1.6
+				},
+				640: {
 					spaceBetween: 20,
 					slidesPerView: 2
 				},

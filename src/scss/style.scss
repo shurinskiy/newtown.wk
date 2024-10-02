@@ -86,6 +86,10 @@ body#home {
 	padding-top: 0;
 }
 
+body#post {
+	background: url('#{$images-path}post-bg.svg') top center / 1px 850px repeat-x transparent;
+}
+
 body.underlay {
 	&::before {
 		display: block;

@@ -1,0 +1,89 @@
+.slider {
+	$self: &;
+	position: static;
+
+	&_gallery {
+		#{$self}__slide {
+			overflow: hidden;
+			border-radius: 10px;
+		
+			> img {
+				display: block;
+			}
+		}
+
+		#{$self}__button {
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+
+	&__slide {
+		height: auto;
+
+		&[data-modal] {
+			cursor: pointer;
+		}
+	}
+
+	&__button {
+		@extend %reset-button;
+		position: absolute;
+		border-radius: 100px;
+		height: 54px;
+		width: 54px;
+		z-index: 1;
+		top: 20%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: background-color 0.3s;
+		
+		@include media('<=sm') {
+			height: 35px;
+			width: 35px;
+		}
+		
+		@include media('<=xs') {
+			display: none;
+		}
+	
+		&:hover {
+			background-color: rgba(var(--accident), 0.8);
+
+			svg {
+				opacity: 1;
+			}
+		}
+
+		img, svg {
+			display: block;
+			width: 13px;
+			height: 23px;
+			fill: rgba(var(--accent));
+			transition: opacity 0.3s;
+			opacity: 0.5;
+			
+			@include media('<=sm') {
+				width: 10px;
+				height: 17px;
+			}
+		}
+
+		&_prev {
+			left: 0;
+			
+			@include media('<=lg') {
+				left: -15px;
+			}
+		}
+		
+		&_next {
+			right: 0;
+
+			@include media('<=lg') {
+				right: -15px;
+			}
+		}
+	}
+}

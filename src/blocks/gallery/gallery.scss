@@ -1,15 +1,15 @@
-.news {
+.gallery {
 	$self: &;
-	
-	&__title {
 
+	&__title {
+		
 	}
-	
+
 	&__inner {
 		box-sizing: border-box;
 		max-width: 1400px;
 		padding: 0 100px;
-		margin-bottom: 40px;
+		margin: 0 auto 60px;
 		position: relative;
 
 		@include media('<=xlg') {
@@ -27,9 +27,5 @@
 		@include media('<=xs') {
 			padding: 0;
 		}
-	}
-
-	&__slider {
-
 	}
 }
