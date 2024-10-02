@@ -8,7 +8,7 @@ import { makeModalFrame } from "../../js/libs/modal";
 		},
 		open: function(modal, el) {
 			scrollLock.disablePageScroll();
-			this.insertAdjacentHTML('beforeend', el.querySelector('img').dataset.text);
+			this.insertAdjacentHTML('afterend', `<div class='modal__sign'>${el.querySelector('img').dataset.text}</div>`);
 		},
 		close: function() {
 			scrollLock.enablePageScroll();
