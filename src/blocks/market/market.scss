@@ -34,7 +34,6 @@
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		grid-gap: 35px 90px;
-		margin-bottom: 40px;
 		
 		@include media('<=xlg') {
 			grid-gap: 35px;

@@ -5,17 +5,24 @@
 		display: block;
 		content: '';
 		height: 20px;
-		background: url('#{$images-path}arch-2.svg') center / 100px 18px repeat-x transparent;
+		background: url('#{$images-path}arch-2.svg') left bottom / 100px 18px repeat-x transparent;
 		max-width: var(--container);
 		width: calc(100% - var(--gap) * 2);
 		margin: 0 auto;
-
+		padding-top: 40px;
+		
 		@include media('<=lg') {
+			padding-top: 30px;
 			background-size: 75px 14px;
 		}
-
-		@include media('<=xs') {
+		
+		@include media('<=sm') {
+			padding-top: 20px;
 			background-size: 60px 12px;
+		}
+		
+		@include media('<=xxs') {
+			padding-top: 10px;
 		}
 
 		@include media('<=xxxs') {

@@ -15,6 +15,10 @@
 		@include media('<=md') {
 			padding: 0 30px;
 		}
+		
+		@include media('<=xxs') {
+			padding: 0 20px;
+		}
 	}
 	
 	&__slider {

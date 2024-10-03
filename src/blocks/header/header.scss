@@ -260,11 +260,13 @@
 	&__logo-mobile {
 		box-sizing: border-box;
 		display: none;
-		background-color: rgb(var(--accident));
+		overflow: hidden;
+		// background-color: rgb(var(--accident));
 		margin-right: auto;
-		padding: 2px;
-		width: 38px;
-		height: 38px;
+		margin-left: -19px;
+		height: 40px;
+		width: auto;
+		border-radius: 0 0 5px 5px;
 		
 		img {
 			display: block;
@@ -274,6 +276,10 @@
 
 		@include media('<=md') {
 			display: block;
+		}
+
+		@include media('<=xs') {
+			margin-left: -15px;
 		}
 	}
 }

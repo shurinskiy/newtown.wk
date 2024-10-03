@@ -24,7 +24,7 @@
 
 	&__cards {
 		max-width: 1560px;
-		margin: 0 auto 40px;
+		margin: 0 auto;
 		width: calc(100% - var(--gap) * 2);
 		display: grid;
 		grid-gap: 40px 240px;

@@ -142,7 +142,7 @@
 		}
 	}
 
-	&__sign {
+	&__signature {
 		position: absolute;
 		left: 0;
 		top: 100%;
@@ -150,6 +150,7 @@
 		color: #dadada;
 		font-size: 14px;
 		padding-top: 8px;
+		// animation: show_fade 0.3s;
 		
 		@include media('<=sm') {
 			font-size: 13px;

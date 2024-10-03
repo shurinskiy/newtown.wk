@@ -8,7 +8,13 @@
 			border-radius: 10px;
 		
 			> img {
+				backface-visibility: hidden;
+				transition: transform 0.3s;
 				display: block;
+			}
+
+			&:hover img {
+				transform: scale(1.1);
 			}
 		}
 
