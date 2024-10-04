@@ -1,6 +1,6 @@
 .about {
 	$self: &;
-	padding-top: 60px;
+	// padding-top: 60px;
 
 	&__top {
 
@@ -14,7 +14,7 @@
 		font-size: 30px;
 		text-align: center;
 		max-width: 890px;
-		margin: 0 auto 95px;
+		margin: 0 auto;
 		@include range(30px, 18px, 960px, 480px);
 		
 		@include media('<=xs') {

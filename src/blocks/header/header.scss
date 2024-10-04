@@ -261,12 +261,11 @@
 		box-sizing: border-box;
 		display: none;
 		overflow: hidden;
-		// background-color: rgb(var(--accident));
 		margin-right: auto;
-		margin-left: -19px;
 		height: 40px;
 		width: auto;
 		border-radius: 0 0 5px 5px;
+		align-self: flex-start;
 		
 		img {
 			display: block;
@@ -276,10 +275,6 @@
 
 		@include media('<=md') {
 			display: block;
-		}
-
-		@include media('<=xs') {
-			margin-left: -15px;
 		}
 	}
 }

@@ -124,6 +124,10 @@
 
 		&_prev {
 			left: 70px;
+
+			svg, img {
+				margin-right: 3px;
+			}
 			
 			@include media('<=xlg') {
 				left: 30px;
@@ -132,6 +136,10 @@
 		
 		&_next {
 			right: 70px;
+
+			svg, img {
+				margin-left: 3px;
+			}
 			
 			@include media('<=xlg') {
 				right: 30px;

@@ -88,6 +88,14 @@ body#home {
 
 body#post {
 	background: url('#{$images-path}post-bg.svg') top center / 1px 850px repeat-x transparent;
+
+	@include media('<=sm') {
+		background-size: 1px 600px;
+	}
+
+	@include media('<=xxs') {
+		background-size: 1px 540px;
+	}
 }
 
 body.underlay {
