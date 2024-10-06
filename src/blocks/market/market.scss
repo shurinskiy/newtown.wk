@@ -80,14 +80,17 @@
 		
 		&:hover {
 			border-color: rgb(var(--accident));
-			color: #fff;
 
 			&::before {
 				height: 100%;
 			}
 
 			svg {
-				fill: rgba(var(--accent), 0.3);
+				fill: rgba(var(--accent), 0.2);
+			}
+
+			#{$self}__card-text {
+				text-shadow: none;
 			}
 		}
 		
@@ -124,7 +127,8 @@
 		max-width: 440px;
 		margin: 0 auto;
 		padding-right: 90px;
-		
+		text-shadow: 1px 1px #DFE298;
+	
 		@include media('<=md') {
 			font-size: 15px;
 			padding-right: 50px;

@@ -17,6 +17,10 @@
 		margin: 0 auto;
 		@include range(30px, 18px, 960px, 480px);
 		
+		@include media('<=sm') {
+			text-align: left;
+		}
+		
 		@include media('<=xs') {
 			margin: 0 auto 55px;
 		}

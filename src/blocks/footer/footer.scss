@@ -3,48 +3,53 @@
 	background-color: rgb(var(--accent));
 	padding: 60px 0;
 	color: #fff;
+	position: relative;
+	
+	&::before {
+		display: block;
+		content: '';
+		height: 100%;
+		width: 100%;
+		max-width: calc(50% - 690px);
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 1;
+		background: url('#{$images-path}footer-wave.svg') center / auto repeat-x transparent;
+
+		@include media('<=xlg') {
+			display: none;
+		}
+	}
 	
 	&__inner {
-		background: url('#{$images-path}footer-wave.svg') center / auto repeat-x transparent;
-		
-		@include media('<=sm') {
-			background: none;
-			padding-right: var(--gap);
-		}
+		background-color: rgb(var(--accent));
+		position: relative;
+		z-index: 2;
 	}
 	
 	&__cols {
 		display: flex;
-		max-width: var(--container);
+		gap: 30px;
+		justify-content: space-between;
 
-		@include media('<=sm') {
+
+		@include media('<=md') {
 			flex-flow: column nowrap;
+			gap: 0;
 		}
 	}
 	
 	&__col {
-		grid-column: span 1;
 		box-sizing: border-box;
-		padding: 80px 30px 35px 0;
-		background-color: rgb(var(--accent));
-		width: 100%;
+		padding: 80px 0 35px;
 		
-		@include media('>sm') {
-			&:nth-child(1) {
-				max-width: 410px;
-			}
-			
-			&:nth-child(2) {
-				max-width: 290px;
-			}
-			
-			&:nth-child(3) {
-				max-width: 310px;
-			}
+		@include media('<=md') {
+			padding: 80px 0 0;
 		}
 		
 		@include media('<=sm') {
-			padding: 40px 0 0 0;
+			padding: 50px 0 0;
 		}
 	}
 	
@@ -56,7 +61,7 @@
 		margin-bottom: 50px;
 		
 		@include media('<=sm') {
-			margin-top: -40px;
+			margin-top: -50px;
 		}
 		
 		@include media('<=xxs') {
@@ -97,12 +102,46 @@
 		width: fit-content;
 		min-height: 50px;
 		border-radius: 10px;
+		transition: background-color 0.3s;
+
+		&:hover {
+			background-color: #fff;
+		}
 		
 		@include media('<=xxs') {
 			font-size: 16px;
 			min-height: 40px;
 			padding: 10px 15px;
 			border-radius: 5px;
+		}
+	}
+
+	&__socials {
+		display: flex;
+		gap: 30px;
+		padding-top: 10px;
+		
+		a {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 26px;
+			height: 26px;
+			background-color: rgb(var(--accident));
+			transition: background-color 0.3s;
+			overflow: hidden;
+			border-radius: 100px;
+			flex-shrink: 0;
+			
+			&:hover {
+				background-color: #fff;
+			}
+
+			svg {
+				width: 16px;
+				height: 16px;
+				fill: rgb(var(--accent));
+			}
 		}
 	}
 }
