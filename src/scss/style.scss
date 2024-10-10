@@ -62,7 +62,7 @@ $breakpoints: (
 
 body, html {
 	// scrollbar-gutter: stable;
-	// scroll-behavior: smooth;	
+	scroll-behavior: smooth;
 	box-sizing: border-box;
 	background-color: #fff;
 	font-size: var(--size);
