@@ -1,6 +1,11 @@
 .slider {
 	$self: &;
+	box-sizing: border-box;
 	position: static;
+
+	@include media('>lg') {
+		padding-right: 2px;
+	}
 
 	&_gallery {
 		#{$self}__slide {

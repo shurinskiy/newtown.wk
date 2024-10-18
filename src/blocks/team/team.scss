@@ -55,10 +55,10 @@
 		}
 
 		&:hover {
-			transform: scale(1.25);
+			// transform: scale(1.25);
 			
 			@include media('<=md') {
-				transform: scale(1.15);
+				// transform: scale(1.15);
 			}
 		}
 	}

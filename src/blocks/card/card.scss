@@ -32,6 +32,11 @@
 		}
 	}
 
+	&__content {
+		text-decoration: none;
+		color: inherit;
+	}
+
 	&__title {
 		font-size: 20px;
 		font-weight: 700;
@@ -44,6 +49,17 @@
 
 	&__text {
 		margin-bottom: 15px;
+		overflow: hidden;
+        text-overflow: ellipsis;
+        display: -moz-box;
+        display: -webkit-box;
+		min-height: 4.8em;
+		line-height: 1.2em;
+        line-clamp: 4;
+        box-orient: vertical;
+        -moz-box-orient: vertical;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
 
 		@include media('<=sm') {
 			font-size: 15px;
